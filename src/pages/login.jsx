@@ -4,7 +4,7 @@ export default function Login() {
   return (
     <>
         <header>
-
+            <NavBar/>
         </header>
         <main>
             <form>
