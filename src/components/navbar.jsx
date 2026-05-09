@@ -3,22 +3,21 @@ import { NavLink } from 'react-router-dom'
 
 function navbar() {
   return (
-    <nav>
+    <nav  className="inline-block box-border w-60 p-5 mx-6 mb-6 bg-blue-600 no-underlinen text-center text-medium text white">
         <NavLink 
             to="/"
-            className="nav-link"
         >
         Home
         </NavLink>
         <NavLink 
             to="/about"
-            className="nav-link"
+            
         >
         About
         </NavLink>
         <NavLink 
             to="/login"
-            className="nav-link"
+            
         >
         Login
         </NavLink>

@@ -1,27 +1,28 @@
 import { useState, useEffect } from 'react'
 import UserCard from '../components/user-card'
+import navbar from '../components/navbar'
 
 function Home() {
     const [users, setUser] = useState([])
 
     useEffect(() => {
-        fetch: ("http:/localhost:4000/users")
-            .then((res) => res.json)
-            .then((data) => data.json)
-            .catch((error) => console.error(error))
+        fetch("http://localhost:5000/users")
+            .then(res => res.json())
+            .then(data => setUser(data))
+            .catch(error => console.error(error))
     }, [])
 
-    const userList = users.map((user) => {
+    const userList = users.map(user => {
         return <UserCard key={user.id} user={user}/>
     })
 
   return (
     <>
         <header>
-            <NavBar/>
+            <h1>Hello</h1>
         </header>
-        <main>
-            <h1>Home!</h1>
+        <main className='flex justify-center align-top'>
+            <h1 className='text-3xl font-bold'>Home!</h1>
             {userList}
         </main>
     </>
