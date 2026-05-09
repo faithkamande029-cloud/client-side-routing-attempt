@@ -16,7 +16,7 @@ function Home() {
     })
 
   return (
-    <div>
+    <>
         <header>
             
         </header>
@@ -24,7 +24,7 @@ function Home() {
             <h1>Home!</h1>
             {userList}
         </main>
-    </div>
+    </>
   )
 }
 
